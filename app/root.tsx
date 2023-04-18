@@ -36,7 +36,10 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <Outlet />
+        <header><img src={logo} width={180}/></header>
+        <main className="container-sm">
+          <Outlet />
+        </main>
         <ScrollRestoration />
         <Scripts />
         <LiveReload />

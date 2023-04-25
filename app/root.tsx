@@ -8,7 +8,7 @@ import {
 } from "@remix-run/react";
 
 import bootstrapCSS from "bootstrap/dist/css/bootstrap.min.css"
-import logo from "../public/logo-reso.jpg";
+import logo from "../public/logo-reso.png";
 import { LinksFunction, MetaFunction } from "@remix-run/node";
 
 export const meta: MetaFunction = () => ({

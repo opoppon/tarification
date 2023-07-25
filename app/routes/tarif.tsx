@@ -16,6 +16,12 @@ export default function Tarif() {
     const {parameters, result} = useLoaderData<LoaderData>() 
     const {tarifs, errors} = result
 
+    const backUrlWithParams = () => {
+        const queryString = new URLSearchParams(parameters).toString()
+
+        return `/?${queryString}`
+    }
+
     const fixed = (n:any) => {
         if (typeof n == "number") {
             return n.toFixed(2)
@@ -46,6 +52,10 @@ export default function Tarif() {
                     </div>
                 </div>
             </div>
+            <div className="d-flex justify-content-end">
+                <NavLink to="/" className="btn btn-primary mt-3 mx-3">Nouvelle demande</NavLink>
+                <NavLink to={backUrlWithParams()} className="btn btn-outline-info mt-3">Modifier</NavLink>
+            </div>
             <p>Le {formatDateFR(parameters.shippingDate)}</p>
             <span className="fw-bold fs-6">Taxe Gasoil non incluse.</span><br/>
             <span className="fst-italic">Hors frais liés à des coûts de représentation, de prise de RDV, ou de RPV appliquée au sein du réseau. Montant transport communiqué à titre indicatif</span>
@@ -74,8 +84,6 @@ export default function Tarif() {
                     </ul>
                 </div>
             </div>
-
-            <NavLink to="/">Nouvelle demande</NavLink>
         </>
     )
 }

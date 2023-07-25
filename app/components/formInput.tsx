@@ -26,7 +26,7 @@ export default function FormInput(
     return (
         <>
             <label htmlFor={name} className="form-label">{(label)} {required && ("*")}</label>
-            <input className="form-control" {...getInputProps(props)} />
+            <input className="form-control" {...getInputProps(props)} defaultValue={value}/>
             {error!=null && (
                 <div className="invalid-feedback">{error}</div>
             )}

@@ -17,7 +17,10 @@ export default function Tarif() {
     const {tarifs, errors} = result
 
     const backUrlWithParams = () => {
-        const queryString = new URLSearchParams(parameters).toString()
+        const queryString = Object
+            .entries(parameters)
+            .filter(([key, val]) => val != null && val != undefined)
+            .map(([key, val]) => `${key}=${val}`).join('&');
 
         return `/?${queryString}`
     }

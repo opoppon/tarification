@@ -139,7 +139,7 @@ export default function Index() {
 					{/* <label htmlFor="zipcodeFrom" className="form-label">CP. Expéditeur</label>
 					<input name="zipcodeFrom" className="form-control" 
 						value={zipcodeFrom} required/> */}
-					<FormInput name="zipcodeFrom" label="CP. Expéditeur" value={myPlatformZipcode} required={true}/>
+					<FormInput name="zipcodeFrom" label="CP. Expéditeur" value={myZipcodeFrom} required={true}/>
 				</div>
 				<div className="col-md-2">
 					<FormInput name="townFrom" label="Ville Expéditeur" value={myTownFrom}/>

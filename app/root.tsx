@@ -37,7 +37,7 @@ export default function App() {
       </head>
       <body>
         <header><img src={logo} width={180}/></header>
-        <main className="container-sm">
+        <main className="container-sm mt-3">
           <Outlet />
         </main>
         <ScrollRestoration />
